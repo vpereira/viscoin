@@ -5,10 +5,8 @@ Programmed in C++.
 
 note from vpereira:
 
-I just changed the magic number to use ppcoin magic number, and I added a copy from ppcoin blockain
+I just changed the magic number to use ppcoin magic number.
 
 to run it:
-
-    xz -d blk0001.data.xz
     make
     ./viscoin blk0001.data
