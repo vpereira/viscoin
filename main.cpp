@@ -12,7 +12,7 @@
 
 using namespace std;
 
-#define MAGIC_BLOCK 0xd9b4bef9
+#define MAGIC_BLOCK 0xe5e9e8e6
 
 static void get_varint(char* b, int &len, long long* val)
 {
