@@ -1,2 +1,6 @@
 viscoin
 *.dat
+*.config
+*.creator
+*.files
+*.includes

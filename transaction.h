@@ -9,6 +9,7 @@ class Transaction
 {
 	public:
 	unsigned int trans_ver;
+    unsigned int nTime;
 	unsigned long long txin_count;
 	std::vector<Txin> txins;
 	unsigned long long txout_count;

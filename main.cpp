@@ -104,12 +104,22 @@ int main(int argc, char** argv)
 		int transPos = len_t;
 
 		for (int k = 0; k < (*va); ++k)
-		{
-			Transaction f;
-			memcpy(&f.trans_ver, transSec+transPos, 4);
-			long long* txin_count;
-			int txin_count_b;
-			cout<<"\tTrans ver: "<<f.trans_ver<<endl;
+        {
+            Transaction *f = new Transaction();
+            memset(f,0x00,sizeof(Transaction));
+            //memcpy(&f.trans_ver, transSec+transPos, sizeof(f.trans_ver));
+            //memcpy(&f.nTime,transSec+transPos+sizeof(f.trans_ver),sizeof(f.nTime));
+            //memcpy(&f.txin_count,transSec+transPos+sizeof(f.trans_ver)+sizeof(f.nTime),sizeof(f.txin_count));
+            //long long* txin_count;
+            //int txin_count_b;
+            //cout<<"\tTrans ver: "<<f.trans_ver<<endl;
+            //cout<<"\tTrans txin_count: "<<f.txin_count<<endl;
+            //cout<<"\tTrans ts: "<<f.nTime<<endl;
+            memcpy(f,transSec+transPos,sizeof(Transaction));
+            cout<<"\tTrans ver:"<< f->trans_ver<<endl;
+            cout<<"\tTrans ts:"<< f->nTime<<endl;
+            cout<<"\tTrans txin_count: " << f->txin_count << endl;
+            cout<<"\tTrans txout_count: " << f->txout_count << endl;
 		}
 
 		cout<<endl<<endl;

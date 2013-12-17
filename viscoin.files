@@ -1,0 +1,8 @@
+blkheader.h
+blkstart.h
+block.h
+main.cpp
+outpoint.h
+transaction.h
+txin.h
+txout.h
